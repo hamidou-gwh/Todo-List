@@ -4,6 +4,22 @@ import requests
 base_URL = "http://127.0.0.1:8000"
 task_endpoint = "/tasks"
 
-def delete_task():
+def create_task():
 
-    assert response.status_code ==
+    #Create new task to delete
+    new_task = {
+        'title': 'This task should be very shortlived',
+        'description': 'Task for testing',
+        'created_date': "2024-06-21",
+        'due_date': "2024-06-22"
+    }
+    
+    response = requests.post(base_URL + task_endpoint, json=new_task)
+    task_id = response.json().get('id')
+    return task_id
+
+def delete_task(create_task):
+    task_id = create_task
+    assert task_id is not None
+    delete_response = requests.delete(f"{base_URL}{task_endpoint}/{task_id}")
+    assert delete_response.status_code == 204
