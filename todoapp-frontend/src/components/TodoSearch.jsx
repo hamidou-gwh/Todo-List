@@ -16,7 +16,6 @@ const TodoSearch = ({addTask}) => {
                 <label>
                     Task:
                     <input type="text" name="name" placeholder='Enter Task Name' { ...register("title", {required: true})}/>
-                    {/* { ...register("task", {required: true}) goes in above line */}
                 </label>
                 <label>
           Description:
@@ -26,10 +25,8 @@ const TodoSearch = ({addTask}) => {
           Due Date:
           <input type="date" name="due_date" {...register("due_date", { required: true })} />
         </label>
-                {/* <input type="submit" value="Enter" /> */}
                 <button>Enter</button>
         </form>
-        {/* { errors.task?.type == "required" && <small> This field cannot be blank </small>} */}
         { errors.title?.type == "required" && <small> This field cannot be blank </small>}
         { errors.description?.type == "required" && <small> This field cannot be blank </small>}
         {errors.due_date?.type == "required" && <small>This field cannot be blank</small>}
