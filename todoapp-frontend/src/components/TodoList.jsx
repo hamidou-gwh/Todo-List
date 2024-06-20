@@ -3,7 +3,7 @@ import '../styles/styles.css'
 import { MdDelete } from "react-icons/md";
 import { TbEdit } from "react-icons/tb";
 
-const TodoList = ({ tasks, deleteTask, updateTask, completeTask }) => {
+const TodoList = ({ tasks, deleteTask,  }) => {
 
   let [ toggle, setToggle ] = useState(false)
   let [ todoItem, setTodoItem ] = useState("")
@@ -18,7 +18,6 @@ const TodoList = ({ tasks, deleteTask, updateTask, completeTask }) => {
       {tasks.map((task, index) => (
         <div className='todolistitem' key= {index}>
           <div className="task">
-          <input type="checkbox" className="checkbox"    onChange={(e) => completeTask(e, task.id)}/>
           <div>
           <p id = "t_task" className = {task.status == "Completed"? "strike":"" }  >{task.title}</p>
            <p>{task.description}</p>
