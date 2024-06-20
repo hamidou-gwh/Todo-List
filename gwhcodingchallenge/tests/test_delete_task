@@ -1,0 +1,9 @@
+import pytest
+import requests
+
+base_URL = "http://127.0.0.1:8000"
+task_endpoint = "/tasks"
+
+def delete_task():
+
+    assert response.status_code ==

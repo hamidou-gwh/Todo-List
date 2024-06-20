@@ -1,0 +1,65 @@
+body {
+    background-color: #74FF6C;
+    height: 100vh;
+    width: 100%;
+    display: flex;    
+}
+
+.search {
+    border: 10px solid #ccc;
+    background-color: white; 
+    padding: 16px; 
+    margin: 16px 0; 
+}
+
+.filter {
+    border: 10px solid #ccc;
+    background-color: white;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.todolist {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.todoitem {
+    display: flex;
+    justify-content: space-between;
+    border: 10px solid #ccc;
+    background-color: white;
+    padding: 8px;
+    font-size: larger;
+}
+
+.edit, .del {
+    margin-top: 10px;
+    background-color: #C4C078;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    gap: 10px; 
+}
+
+.task {
+    display: flex;
+}
+
+#t_task {
+    padding-left: 10px;
+}
+
+.strike {
+    text-decoration: line-through;
+  }
+  
